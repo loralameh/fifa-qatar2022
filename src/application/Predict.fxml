@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="638.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PredictController">
+   <children>
+      <ImageView fitHeight="409.0" fitWidth="485.0" layoutX="80.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../assets/World-Flags-small.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="184.0" fitWidth="501.0" layoutX="32.0" layoutY="336.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../assets/coins.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="341.0" prefHeight="757.0" prefWidth="600.0" spacing="15.0">
+         <children>
+            <Text fill="#5b0729" strokeType="OUTSIDE" strokeWidth="0.0" text="Predict and Win " wrappingWidth="402.61865234375">
+               <font>
+                  <Font name="Berlin Sans FB" size="35.0" />
+               </font>
+            </Text>
+            <Text fill="#e10606" strokeType="OUTSIDE" strokeWidth="0.0" text="Guess the winning team and win 10 coins" wrappingWidth="383.8134765625">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+               </font></Text>
+            <Text fill="#e10606" layoutX="201.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guess the score of the match and win 50 coins" wrappingWidth="384.173828125">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+               </font>
+            </Text>
+            <AnchorPane prefHeight="216.0" prefWidth="600.0">
+               <children>
+                  <ImageView fx:id="flag1" fitHeight="70.0" fitWidth="150.0" layoutX="65.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/argentinaFlag.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="flag2" fitHeight="70.0" fitWidth="150.0" layoutX="228.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/brazilFlag.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#5b0729" layoutX="162.0" layoutY="97.0" rotate="-30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VS" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="61.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="gameLabel1" fill="#5b0729" layoutX="365.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Argentina VS Barazil">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="36.0" fitWidth="27.0" layoutX="387.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/PngItem_1854206.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="gameDate1" layoutX="420.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="February 16, 2022">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="gameStadium1" layoutX="425.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qatar Staduim 1">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtTeam1Game1" layoutX="142.0" layoutY="134.0" prefHeight="25.0" prefWidth="35.0" />
+                  <Text layoutX="190.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/" wrappingWidth="18.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="31.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtTeam2Game1" layoutX="221.0" layoutY="134.0" prefHeight="25.0" prefWidth="35.0" />
+                  <Text layoutX="37.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expected Score">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="v1" layoutX="78.0" layoutY="115.0" mnemonicParsing="false" onAction="#predictGame" text="Viva Argentina" />
+                  <RadioButton fx:id="v2" layoutX="235.0" layoutY="115.0" mnemonicParsing="false" onAction="#predictGame" text="Viva Brazil" />
+                  <Text fx:id="predictionPercentage1" layoutX="108.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="70%" />
+                  <Text fx:id="predictionPercentage2" layoutX="261.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30%" />
+                  <Button fx:id="btnPredict1" layoutX="163.0" layoutY="176.0" mnemonicParsing="false" onAction="#onPredictGame1" text="Predict" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="668.0" prefHeight="216.0" prefWidth="600.0">
+               <children>
+                  <ImageView fx:id="flag3" fitHeight="70.0" fitWidth="150.0" layoutX="65.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/franceFlag.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="flag4" fitHeight="70.0" fitWidth="150.0" layoutX="228.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/germanyFlag.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#5b0729" layoutX="162.0" layoutY="97.0" rotate="-30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VS" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="61.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="gameLabel2" fill="#5b0729" layoutX="365.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algeria VS Germany">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="36.0" fitWidth="27.0" layoutX="387.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/PngItem_1854206.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="gameDate2" layoutX="420.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="February 16, 2022">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="gameStadium2" layoutX="425.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qatar Staduim 2">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtTeam1Game2" layoutX="142.0" layoutY="134.0" prefHeight="25.0" prefWidth="35.0" />
+                  <Text layoutX="190.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/" wrappingWidth="18.0">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="31.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="txtTeam2Game2" layoutX="221.0" layoutY="134.0" prefHeight="25.0" prefWidth="35.0" />
+                  <Text layoutX="37.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expected Score">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <RadioButton fx:id="v3" layoutX="51.0" layoutY="114.0" mnemonicParsing="false" onAction="#predictGame" text="Viva Algeria" />
+                  <RadioButton fx:id="v4" layoutX="239.0" layoutY="115.0" mnemonicParsing="false" onAction="#predictGame" text="Viva Germany" />
+                  <Text fx:id="predictionPercentage3" layoutX="101.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="70%" />
+                  <Text fx:id="predictionPercentage4" layoutX="263.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="70%" />
+                  <Button fx:id="btnPredict2" layoutX="162.0" layoutY="176.0" mnemonicParsing="false" onAction="#onPredictGame2" text="Predict" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

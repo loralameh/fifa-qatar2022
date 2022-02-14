@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="loginBorderPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <center>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="638.0">
+      	<children>
+            <AnchorPane prefHeight="600.0" prefWidth="235.0" style="-fx-background-color: #999999;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="46.0" layoutY="44.0" text="WELCOME" textFill="#5b0729">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="8.0" layoutY="106.0" prefHeight="23.0" prefWidth="164.0" text="What are you waiting for?" textFill="#5b0729">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="162.0" prefHeight="30.0" prefWidth="217.0" text="Stay Informed with the latest matches " />
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="307.0" prefHeight="30.0" prefWidth="217.0" text="Pridict and win" />
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="198.0" prefHeight="30.0" prefWidth="217.0" text="know matches results" />
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="228.0" prefHeight="30.0" prefWidth="217.0" text="gift your friends seats in a game" />
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="270.0" prefHeight="30.0" prefWidth="217.0" text="Have fun and share fun!" />
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="343.0" prefHeight="30.0" prefWidth="217.0" text="And much more..." />
+               </children>
+            </AnchorPane>
+            <Label layoutX="318.0" layoutY="161.0" text="Login To Your Account" textFill="#5b0729">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLoginEmail" layoutX="316.0" layoutY="233.0" prefHeight="25.0" prefWidth="237.0" promptText="Email Address" />
+            <Button fx:id="btnLogin" layoutX="294.0" layoutY="343.0" mnemonicParsing="false" onAction="#loginClicked" prefHeight="32.0" prefWidth="281.0" style="-fx-background-color: #5b0729; -fx-background-radius: 50;" text="LOG IN" textFill="WHITE" />
+            <Label fx:id="lblLoginError" layoutX="409.0" layoutY="400.0" text="Error Here" textFill="#f20000" />
+            <Hyperlink fx:id="linkToSignUp" layoutX="337.0" layoutY="437.0" onAction="#getSignUpPage" text="Don't have an account? SignUp here" />
+            <ImageView fitHeight="138.0" fitWidth="397.0" layoutX="238.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/header2.jpg" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="txtLoginPassword" layoutX="318.0" layoutY="288.0" prefHeight="25.0" prefWidth="238.0" promptText="Password" />
+            </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

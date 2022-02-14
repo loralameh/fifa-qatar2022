@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="signUpBorderPane" prefWidth="638.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+      	<children>
+      
+            <AnchorPane layoutY="40.0" prefHeight="362.0" prefWidth="337.0">
+               <children>
+                  <ImageView fx:id="sideImage" fitHeight="317.0" fitWidth="269.0" layoutX="36.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/logo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="txtSignUpName" layoutX="407.0" layoutY="100.0" promptText="Enter your name" />
+            <ImageView fitHeight="25.0" fitWidth="37.0" layoutX="366.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/userIcon.png" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="rdbSignUpMale" layoutX="407.0" layoutY="251.0" mnemonicParsing="false" text="M" />
+            <RadioButton fx:id="rdbSignUpFemale" layoutX="506.0" layoutY="251.0" mnemonicParsing="false" text="F" />
+            <TextField fx:id="txtSignUpLocation" layoutX="407.0" layoutY="307.0" promptText="Enter your address" />
+            <Button fx:id="sign_up" layoutX="374.0" layoutY="359.0" mnemonicParsing="false" onAction="#signUPButton" prefHeight="25.0" prefWidth="183.0" style="-fx-background-color: #5b0729;" text="Sign up" textFill="WHITE" />
+            <ImageView fitHeight="25.0" fitWidth="37.0" layoutX="374.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/passwordIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="37.0" layoutX="374.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/sexIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="37.0" layoutX="373.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/locationIcon.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtSignUpEmail" layoutX="407.0" layoutY="148.0" promptText="Enter your email" />
+            <ImageView fitHeight="38.0" fitWidth="27.0" layoutX="369.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/email-Icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblSignUpError" layoutX="369.0" layoutY="409.0" text="Error here" textFill="RED" />
+            <Hyperlink fx:id="linkToLogin" layoutX="362.0" layoutY="449.0" onAction="#getLoginPage" text="Already have an account? Login here" />
+            <PasswordField fx:id="txtSignUpPassword" layoutX="407.0" layoutY="197.0" promptText="Enter your password" />
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </AnchorPane>
+   </center>
+</BorderPane>
